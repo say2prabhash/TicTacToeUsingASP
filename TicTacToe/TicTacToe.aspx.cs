@@ -10,6 +10,7 @@ namespace TicTacToe
     public partial class TicTacToe : System.Web.UI.Page
     {
         Button button;
+        string playerNum = "1";
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -17,23 +18,25 @@ namespace TicTacToe
 
         protected void Button_Click(object sender, EventArgs e)
         {
+            
             button = (Button)sender;
-            ViewState["playerState"] = player.Text;
             if(ViewState["playerState"]!=null)
             {
-                player.Text = ViewState["playerState"].ToString();
+                playerNum = ViewState["playerState"].ToString();
             }
-            if (player.Text.Equals("Player1") && button.Text.Equals("-"))
+            if (playerNum.Equals("1") && button.Text.Equals("-"))
             {
                 button.Text = "X";
                 WinningCondition(button.Text);
                 player.Text = "Player2";
+                ViewState["playerState"] = "2";
             }
             else if (button.Text.Equals("-"))
             {
                 button.Text = "O";
                 WinningCondition(button.Text);
                 player.Text = "Player1";
+                ViewState["playerState"] = "1";
             }
             
         }
@@ -50,7 +53,7 @@ namespace TicTacToe
                     (Button1.Text.Equals(mark) && Button5.Text.Equals(mark) && Button9.Text.Equals(mark))||
                     (Button3.Text.Equals(mark) && Button5.Text.Equals(mark) && Button7.Text.Equals(mark)))
             {
-                if (player.Text.Equals("Player1"))
+                if (playerNum.Equals("1"))
                 {
                     lbl_winning.Text += "Player1 won";
 
