@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TicTacToe.aspx.cs" Inherits="TicTacToe.TicTacToe" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" EnableViewState="true" CodeBehind="TicTacToe.aspx.cs" Inherits="TicTacToe.TicTacToe" %>
 
 <!DOCTYPE html>
 
@@ -17,6 +17,8 @@
             <asp:Button ID="Button4" runat="server"  Text="-" OnClick="Button_Click" Width="40px" />
             <asp:Button ID="Button5" runat="server" Text="-" OnClick="Button_Click" Width="40px" />
             <asp:Button ID="Button6" runat="server" Text="-" OnClick="Button_Click" Width="40px" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="player" runat="server" Text="Player1"></asp:Label>
         </p>
         <asp:Button ID="Button7" runat="server"  Text="-" OnClick="Button_Click" Width="40px" />
         <asp:Button ID="Button8" runat="server"  Text="-" OnClick="Button_Click" Width="40px" />
