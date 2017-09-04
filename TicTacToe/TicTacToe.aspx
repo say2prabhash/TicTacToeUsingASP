@@ -26,6 +26,9 @@
         <p>
             <asp:Label ID="lbl_winning" runat="server" Text="Winning Player:"></asp:Label>
         </p>
+        <p>
+            <asp:Button ID="btn_reset" runat="server" OnClick="btn_reset_Click" Text="Reset" />
+        </p>
     </form>
 </body>
 </html>

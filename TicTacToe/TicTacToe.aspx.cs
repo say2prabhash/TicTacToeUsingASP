@@ -61,8 +61,25 @@ namespace TicTacToe
                 else
                 {
                     lbl_winning.Text += "Player2 won";
-                }                }
+                }
             }
+            }
+
+        protected void btn_reset_Click(object sender, EventArgs e)
+        {
+            Button1.Text = "-";
+            Button2.Text = "-";
+            Button3.Text = "-";
+            Button4.Text = "-";
+            Button5.Text = "-";
+            Button6.Text = "-";
+            Button7.Text = "-";
+            Button8.Text = "-";
+            Button9.Text = "-";
+            ViewState["playerState"] = "1";
+            player.Text = "Player 1";
+            lbl_winning.Text = "Winning Player:";
         }
+    }
        
     }
